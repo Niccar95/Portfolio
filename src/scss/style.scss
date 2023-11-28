@@ -13,16 +13,17 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  background-image: linear-gradient(to left, rgba(250, 131, 52, 0.5), rgb(0, 119, 182)), url(/src/img/nature-3539665_1920.jpg);
-  background-repeat: repeat;
+  background-image: linear-gradient(to left, rgba(250, 131, 52, 0.5), rgb(3, 4, 94)), url("/src/img/sea.jpg");
+  background-repeat: no-repeat;
   background-size: cover; 
 
 }
 
 #header {
   padding: 2em;
-  border: solid black;
-
+  border-bottom: solid rgba(255, 255,255, 0.2);
+  background-image: linear-gradient(to right, rgba(3, 4, 94, 0.5),  rgba(0, 119, 182)), url("/src/img/blob-scene.png");
+  margin-bottom: 1em;
 
   &__navigation {
     display: flex;
@@ -35,35 +36,69 @@ a {
 }
 a:hover {
   color: rgb(250, 131, 52);
+
 }
 } 
 
 }
 
 body {
- margin: 0 auto;
-
-h1 {
-  font-size: 2em;
-  text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
-}
+ margin: 0;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
 
 #mainContainer {
+  flex: 1;
   margin: 0;
   display: grid;
   grid-gap: 1em;
-  grid-template-rows: 200px 200px;
-  grid-template-columns: auto auto auto;
-  border: solid black;
+  grid-template-rows: 500px;
+  grid-template-columns: 400px 500px auto;
   
   &__presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 1em;
-    text-align: center;
-    grid-area: 1 / 2 / 3 / 3;
+    grid-area: 1 / 2 / 2 / 3;
+
+    h1 {
+      font-size: 2em;
+      text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+    }
+    
+  }
+
+  &__imgContainer {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 1 / 2 / 2;
+  
+    &__myPicture {
+      width: 300px;
+      border: solid rgb(255, 255, 255, 0.2) 0.2em;
+      border-top-left-radius: 10em;
+      border-bottom-right-radius: 10em;
+      border-top-right-radius: 15em;
+      border-bottom-left-radius: 20em;
+    }
   }
 }
+
+#myFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: solid rgba(255, 255,255, 0.2);
+  background-image: linear-gradient(to right, rgba(3, 4, 94, 0.5),  rgb(0, 119, 182)), url("/src/img/blob-scene.png");
+  
 }
 
+}
 
 
 button {
@@ -91,7 +126,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: rgb(0, 119, 182);
   }
   button {
     background-color: #f9f9f9;

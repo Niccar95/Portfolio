@@ -33,7 +33,14 @@ mainTitle.textContent = "I'm Nicolas Carrasco";
 
 const presentation = document.createElement("p");
 presentationContainer.appendChild(presentation);
-presentation.textContent = "I'm an aspiring Frontend developer...";
+presentation.textContent = "and I'm an aspiring Frontend developer...";
+
+const imgContainer = document.getElementById("mainContainer__imgContainer");
+const myPicture = document.createElement("img");
+myPicture.src = "/src/img/myPic.jpg";
+myPicture.setAttribute("id", "mainContainer__imgContainer__myPicture");
+
+imgContainer.appendChild(myPicture);
 
 const myFooter = document.getElementById("myFooter");
 const footerContent = document.createElement("p");
@@ -41,4 +48,5 @@ const footerContent = document.createElement("p");
 myFooter.appendChild(footerContent);
 footerContent.innerHTML = "&copy; 2023 My Portfolio. All rights reserved.";
 
+footerContent.setAttribute("id", "myFooter__footerContent");
 
