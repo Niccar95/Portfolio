@@ -16,10 +16,13 @@
   background-image: linear-gradient(to left, rgba(250, 131, 52, 0.5), rgb(0, 119, 182)), url(/src/img/nature-3539665_1920.jpg);
   background-repeat: repeat;
   background-size: cover; 
+
 }
 
 #header {
-  padding: 2em;;
+  padding: 2em;
+  border: solid black;
+
 
   &__navigation {
     display: flex;
@@ -37,36 +40,31 @@ a:hover {
 
 }
 
-main {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+body {
+ margin: 0 auto;
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2em;
   text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
 }
 
 #mainContainer {
-  width: 100%;
+  margin: 0;
   display: grid;
-  grid-gap: 2em;
+  grid-gap: 1em;
   grid-template-rows: 200px 200px;
   grid-template-columns: auto auto auto;
   border: solid black;
-  margin: 0 auto;
-  padding: 2rem;
   
-
   &__presentation {
+    padding: 1em;
     text-align: center;
+    grid-area: 1 / 2 / 3 / 3;
   }
-
 }
+}
+
+
 
 button {
   border-radius: 8px;

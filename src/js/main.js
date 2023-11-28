@@ -23,7 +23,7 @@ navLink2.textContent = "Portfolio";
 navLink3.textContent = "About";
 navLink4.textContent = "Contact";
 
-const mainContainer = document.getElementById("mainContainer");
+
 const presentationContainer = document.getElementById("mainContainer__presentation");
 const mainTitle = document.createElement("h1");
 
@@ -34,5 +34,11 @@ mainTitle.textContent = "I'm Nicolas Carrasco";
 const presentation = document.createElement("p");
 presentationContainer.appendChild(presentation);
 presentation.textContent = "I'm an aspiring Frontend developer...";
+
+const myFooter = document.getElementById("myFooter");
+const footerContent = document.createElement("p");
+
+myFooter.appendChild(footerContent);
+footerContent.innerHTML = "&copy; 2023 My Portfolio. All rights reserved.";
 
 
