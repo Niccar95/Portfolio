@@ -1,34 +1,32 @@
 import '../scss/style.scss'
 
 
-const headerNavigation = document.getElementById("header__navigation");
+const headerNavigation = document.querySelector(".header__navigation");
 
-const navLink = document.createElement("a");
-const navLink2 = document.createElement("a");
-const navLink3 = document.createElement("a");
-const navLink4 = document.createElement("a");
+const homeLink = document.createElement("a");
+const portfolioLink = document.createElement("a");
+const aboutLink = document.createElement("a");
+const contactLink = document.createElement("a");
 
-headerNavigation.appendChild(navLink);
-headerNavigation.appendChild(navLink2);
-headerNavigation.appendChild(navLink3);
-headerNavigation.appendChild(navLink4);
+headerNavigation.appendChild(homeLink);
+headerNavigation.appendChild(portfolioLink);
+headerNavigation.appendChild(aboutLink);
+headerNavigation.appendChild(contactLink);
 
-navLink.setAttribute("href", "#");
-navLink2.setAttribute("href", "#");
-navLink3.setAttribute("href", "#");
-navLink4.setAttribute("href", "#");
+homeLink.setAttribute("href", "#");
+portfolioLink.setAttribute("href", "#");
+aboutLink.setAttribute("href", "#");
+contactLink.setAttribute("href", "#");
 
-navLink.textContent = "Home";
-navLink2.textContent = "Portfolio";
-navLink3.textContent = "About";
-navLink4.textContent = "Contact";
+homeLink.textContent = "Home";
+portfolioLink.textContent = "Portfolio";
+aboutLink.textContent = "About";
+contactLink.textContent = "Contact";
 
-navLink.className = "header__navigation-links";
-navLink2.className = "header__navigation-links";
-navLink2.className = "header__navigation-links";
-navLink3.className = "header__navigation-links";
-navLink4.className = "header__navigation-links";
-
+homeLink.className = "header__navigation-links";
+portfolioLink.className = "header__navigation-links";
+aboutLink.className = "header__navigation-links";
+contactLink.className = "header__navigation-links";
 
 const presentationContainer = document.getElementById("mainContainer__presentation");
 const mainTitle = document.createElement("h1");
@@ -42,15 +40,17 @@ presentationContainer.appendChild(presentation);
 presentation.textContent = "<p> and I'm Frontend developer striving to achieve great things. Check out my projects and find out more about me. </p>";
 
 
-
-const checkMyLinks = document.createElement("p");
+const checkMyLinks = document.createElement("h4");
 
 const myLinksContainer = document.getElementById("mainContainer__myLinksContainer");
+checkMyLinks.textContent = "<p> You can also find me here: </p>";
+
 myLinksContainer.appendChild(checkMyLinks);
-checkMyLinks.textContent = "<p> You can also check out my other links: </p>";
 
 
-const myLinksNavigation = document.getElementById("mainContainer__myLinksContainer-navigation");
+const myLinksNavigation = document.createElement("nav");
+myLinksNavigation.setAttribute("id", "mainContainer__myLinksContainer-navigation");
+myLinksContainer.appendChild(myLinksNavigation);
 
 const myLinks = document.createElement("a");
 myLinksNavigation.appendChild(myLinks);
@@ -58,10 +58,21 @@ myLinksNavigation.appendChild(myLinks);
 const myLinks2 = document.createElement("a");
 myLinksNavigation.appendChild(myLinks2);
 
-const myLinks3 = document.createElement("a");
-myLinksNavigation.appendChild(myLinks3);
+const githubIcon = document.createElement("object");
+githubIcon.data = "/src/img/github.svg";
+myLinks.appendChild(githubIcon);
 
-const myLinksIcon = document.createElement("svg");
+githubIcon.setAttribute("width", "50");
+githubIcon.setAttribute("height", "50");
+
+const linkednIcon = document.createElement("svg");
+myLinks2.appendChild(linkednIcon);
+
+
+
+
+
+
 
 
 
