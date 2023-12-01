@@ -40,7 +40,7 @@ const myPicture = document.createElement("img");
 myPicture.src = "/src/img/myPic.jpg";
 myPicture.setAttribute("id", "mainContainer__imgContainer__myPicture");
 
-imgContainer.appendChild(myPicture);
+//imgContainer.appendChild(myPicture);
 
 const myFooter = document.getElementById("myFooter");
 const footerContent = document.createElement("p");
