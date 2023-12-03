@@ -6,7 +6,6 @@
   font-family: "Roboto Mono", monospace;
   line-height: 1.5;
   font-weight: 400;
-  font-size: 20px;
   color: whitesmoke;
   background-image: linear-gradient(to left, rgba(112, 112, 112, 0.5), rgb(159, 159, 159, 0.5)), url("/src/img/forest.jpg");
   background-repeat: no-repeat;
@@ -51,61 +50,59 @@ body {
   border-right: solid rgba(255, 255,255, 0.2);
   border-left: solid rgba(255, 255, 255, 0.2);
   
-#mainContainer {
+.mainContainer {
   flex: 1;
-  margin: 0;
   display: grid;
   grid-gap: 1em;
   grid-template-rows: auto auto;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   
   &__presentation {
-    text-align: center;
-    padding: 1em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-area: 1 / 2 / 2 / 3;
 
-    h1 {
-      font-size: 2em;
+    h2 {
       text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
     }
     
   }
 
-  &__myLinksContainer {
-    border: solid black;
+  .mainContainer__myLinksContainer {
+    padding: 0.5em;
     grid-area: 2 / 2 / 3 / 3;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    h4 {
+    h3 {
       text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
     }
 
-    &-navigation {
+    &__navigation {
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
-      border: solid black;
       width: 200px;
       height: 100px;
+
+
     }
   }
 
   &__imgContainer {
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     grid-column: 1 / 1 / 2 / 2;
   
     &__myPicture {
-      width: 300px;
-      border: solid rgb(255, 255, 255, 0.2) 0.2em;
-      border-top-left-radius: 10em;
-      border-bottom-right-radius: 10em;
-      border-top-right-radius: 15em;
-      border-bottom-left-radius: 20em;
+      width: 200px;
+      border: solid rgb(255, 255, 255, 0.2);
+     
     }
   }
 }

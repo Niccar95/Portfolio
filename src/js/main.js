@@ -28,45 +28,61 @@ portfolioLink.className = "header__navigation-links";
 aboutLink.className = "header__navigation-links";
 contactLink.className = "header__navigation-links";
 
-const presentationContainer = document.getElementById("mainContainer__presentation");
-const mainTitle = document.createElement("h1");
+const presentationContainer = document.querySelector(".mainContainer__presentation");
+const mainTitle = document.createElement("h2");
 
+
+//presentation 
 presentationContainer.appendChild(mainTitle);
 
-mainTitle.textContent = "<h1> I'm Nicolas Carrasco </h1>";
+mainTitle.textContent = "I'm Nicolas Carrasco";
 
 const presentation = document.createElement("p");
 presentationContainer.appendChild(presentation);
-presentation.textContent = "<p> and I'm Frontend developer striving to achieve great things. Check out my projects and find out more about me. </p>";
+presentation.innerHTML = "and I'm Frontend developer striving to achieve great things. Check out my projects and find out more about me.";
 
 
-const checkMyLinks = document.createElement("h4");
+//länk sektion
 
-const myLinksContainer = document.getElementById("mainContainer__myLinksContainer");
-checkMyLinks.textContent = "<p> You can also find me here: </p>";
+
+const checkMyLinks = document.createElement("h3");
+
+const myLinksContainer = document.querySelector(".mainContainer__myLinksContainer");
+checkMyLinks.innerHTML = "You can also find me here: ";
 
 myLinksContainer.appendChild(checkMyLinks);
 
 
 const myLinksNavigation = document.createElement("nav");
-myLinksNavigation.setAttribute("id", "mainContainer__myLinksContainer-navigation");
+myLinksNavigation.classList.add("mainContainer__myLinksContainer__navigation");
 myLinksContainer.appendChild(myLinksNavigation);
 
 const myLinks = document.createElement("a");
 myLinksNavigation.appendChild(myLinks);
+myLinks.setAttribute("href", "https://github.com/Niccar95");
 
 const myLinks2 = document.createElement("a");
 myLinksNavigation.appendChild(myLinks2);
+myLinks2.setAttribute("href", "https://www.linkedin.com/home?originalSubdomain=se");
 
-const githubIcon = document.createElement("object");
-githubIcon.data = "/src/img/github.svg";
+//svg ikoner
+
+const githubIcon = document.createElement("img");
+githubIcon.src = "/src/img/github.svg";
 myLinks.appendChild(githubIcon);
 
 githubIcon.setAttribute("width", "50");
 githubIcon.setAttribute("height", "50");
 
-const linkednIcon = document.createElement("svg");
-myLinks2.appendChild(linkednIcon);
+const linkedInIcon = document.createElement("img");
+linkedInIcon.src = "/src/img/linkedin.svg";
+myLinks2.appendChild(linkedInIcon);
+
+linkedInIcon.setAttribute("width", "40");
+linkedInIcon.setAttribute("height", "40");
+
+githubIcon.classList.add("mainContainer__myLinksContainer__navigation-icon");
+linkedInIcon.classList.add("mainContainer__myLinksContainer__navigation-icon");
 
 
 
@@ -81,16 +97,23 @@ myLinks2.appendChild(linkednIcon);
 
 
 
-/*
 
-const imgContainer = document.getElementById("mainContainer__imgContainer");
+
+
+
+
+
+
+
+
+const imgContainer = document.querySelector(".mainContainer__imgContainer");
 const myPicture = document.createElement("img");
-myPicture.src = "/src/img/myPic.jpg";
-myPicture.setAttribute("id", "mainContainer__imgContainer__myPicture");
+myPicture.src = "/src/img/myPicture.jpg";
+myPicture.classList.add("mainContainer__imgContainer__myPicture");
 
 imgContainer.appendChild(myPicture);
 
-*/
+
 
 
 
