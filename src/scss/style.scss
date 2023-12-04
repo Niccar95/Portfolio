@@ -13,19 +13,19 @@
 
 }
 
-.header {
+.page-header {
   height: 100px;
   border-bottom: solid rgba(255, 255,255, 0.2);
   background-color: rgba(0, 0, 0, 0.2);
   margin-bottom: 1em;
 
-  &__navigation {
+  &__nav {
     height: 100px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
- &-links {
+ .page-header__link {
   font-weight: 500;
   color: whitesmoke;
   text-decoration: none;
@@ -45,41 +45,60 @@ body {
   display: flex;
   flex-direction: column;
   width: 60%;
+  padding: 1em;
   margin: 0 auto;
   min-height: 100vh;
   border-right: solid rgba(255, 255,255, 0.2);
   border-left: solid rgba(255, 255, 255, 0.2);
+  overflow-y: scroll; 
   
-.mainContainer {
+.main-container {
   flex: 1;
   display: grid;
   grid-gap: 1em;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 1fr 1fr;
   
-  &__presentation {
-    padding: 0.5em;
+  .presentation {
+    padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-area: 1 / 2 / 2 / 3;
 
-    h2 {
+    background: transparent;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 1em;
+
+
+    &__title {
       text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    &__description {
+      text-align: center;
     }
     
   }
 
-  .mainContainer__myLinksContainer {
-    padding: 0.5em;
+  .my-links {
+    padding: 1em;
     grid-area: 2 / 2 / 3 / 3;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    h3 {
+    background: transparent;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 1em;
+   
+    &__title {
       text-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+      text-align: center;
     }
 
     &__navigation {
@@ -88,32 +107,45 @@ body {
       align-items: center;
       width: 200px;
       height: 100px;
-
-
     }
   }
 
-  &__imgContainer {
+  .about-me {
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-column: 1 / 1 / 2 / 2;
+    grid-area: 3 / 2 / 4 / 3;
+    width: 100%;
+
+    background: transparent;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+    border-radius: 1em;
   
-    &__myPicture {
-      width: 200px;
+    &__img-container {
+      padding: 2em;
       border: solid rgb(255, 255, 255, 0.2);
+      border-radius: 1em;
+
+      .about-me__image {
+        border-radius: 1em;
+        width: 200px;  
+      }
+    
      
     }
   }
+
+  
 }
 
-#myFooter {
+.page-end {
+  margin-top: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
   border-top: solid rgba(255, 255,255, 0.2);
-  background-color: rgba(0, 0, 0, 0.2);
-  
+  background-color: rgba(0, 0, 0, 0.2); 
 }
 
 }

@@ -6,24 +6,62 @@
     <title>My Portfolio</title>
   </head>
   <body>
-    <header class="header">
-       <nav class="header__navigation"></nav>
+    <header class="page-header">
+       <nav class="page-header__nav">
+        <a href="#" class="page-header__link">Home</a>
+        <a href="#" class="page-header__link">Portfolio</a>
+        <a href="#" class="page-header__link">About</a>
+        <a href="#" class="page-header__link">Contact</a>
+       </nav>
     </header>
-    <main class="mainContainer">
 
-      <figure class="mainContainer__imgContainer"></figure>
+    <main class="main-container">
+      
+        <section class="presentation">
 
-        <section class="mainContainer__presentation"></section>
+          <h2 class="presentation__title">I'm Nicolas Carrasco</h2>
 
-        <section class="mainContainer__myLinksContainer">
+          <p class="presentation__description">and I'm a Frontend developer striving to achieve great things. Check out my projects and find out more about me.</p>
+
+        </section>
+
+       
+        <section class="my-links">
+
+          <h3 class="my-links__title">You can also find me here:</h3>
          
+          <nav class="my-links__navigation">
+            
+            <a href="https://github.com/Niccar95" class="my-links__link">
+
+              <img src="/src/img/github.svg" width="50" height="50" alt="Github"  class="my-links__icon">
+
+            </a>
+
+            <a href="https://www.linkedin.com/home?originalSubdomain=se" class="my-links__link">
+
+              <img src="/src/img/linkedin.svg" width="40" height="40" alt="LinkedIn" class="my-links__icon">
+
+            </a>
+
+          </nav>
     
         </section>
-    
+
+        <section class="about-me">
+          
+        <figure class="about-me__img-container"> 
+          <img src="/src/img/myPicture.jpg" class="about-me__image" alt="My Picture">
+          <figcaption class="about-me__caption">Nicolas Carrasco</figcaption>
+        </figure>
+
+        </section>
+     
+       
     
        </main>
-      <footer id="myFooter">
-
+      <footer class="page-end">
+        <p class="page-end__content">&copy; 2023 My Portfolio. All rights reserved.</p>
       </footer>
 
     <script type="module" src="/src/js/main.js"></script>
